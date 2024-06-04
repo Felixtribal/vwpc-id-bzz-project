@@ -58,7 +58,7 @@ export const HomePage = () => {
           scrollTrigger: {
             trigger: image,
             start: "top top",
-            end: "bottom center",
+            end: "bottom top",
             scrub: true,
             pin: true,
             markers: true,
