@@ -36,10 +36,6 @@ export const HomePage = () => {
   // using the lenis for a smooth scroll
   const lenis = new Lenis();
 
-  lenis.on("scroll", (e: Event) => {
-    console.log(e);
-  });
-
   lenis.on("scroll", ScrollTrigger.update);
 
   gsap.ticker.add((time) => {
