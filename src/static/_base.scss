@@ -1,0 +1,46 @@
+// colors variables
+$primaryBlue600: #001e50;
+$whiteClr:#FFFFFF;
+
+// variable fonts display
+@font-face {
+  font-family: "VW Text";
+  src: url("../../public/fonts/vwtext-bold.woff")
+    format(‘woff supports variations’);
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+// fall back fonts on VW text
+$fallBackFonts:BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+"Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-sans;
+
+
+// font Side Mixins
+@mixin fontSize16px() {
+    font-size: clamp(1rem, 1.05vw, 1.05rem);
+}
+
+
+
+// needed mixins
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin flexAlignCenter($direction){
+    @include flex($direction);
+    align-items: center;
+}
+
+
+@mixin flexCenter($direction){
+    @include flex($direction);
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexDirection($direction){
+    @include flex($direction);
+}

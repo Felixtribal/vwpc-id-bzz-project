@@ -1,0 +1,33 @@
+@import "../../static/base";
+
+
+
+// icons mixins
+// Profile icon mixin 
+@mixin ProfileIcon(){
+    width: 1.375rem;
+    height: 1.375rem;
+    @include flexCenter(column);
+
+    > .profile{
+        position: absolute;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// including the mixins with the correct selectors
+.iconContainer{
+    @include ProfileIcon();
+}

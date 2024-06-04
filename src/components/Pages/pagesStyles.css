@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "VW Text";
+  src: url("../../public/fonts/vwtext-bold.woff") format(‘woff supports variations’);
+  font-weight: 100 900;
+  font-display: swap;
+}
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+.heroSection > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: white;
+  z-index: 9999;
+}
+.heroSection > .whiteSection {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.heroSection > .whiteSection div.text {
+  width: 100%;
+  height: 100%;
+  font-size: 40rem;
+  position: absolute;
+  top: 0;
+  mix-blend-mode: screen;
+  background-color: white;
+}
+.heroSection > .whiteSection div.text > .actualText {
+  transform: translateX(100px);
+}
+@media (min-width: 1440px) {
+  .heroSection > .whiteSection div.text > .actualText {
+    transform: translateX(200px);
+  }
+}
+.heroSection > .whiteSection div.text::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 1439px) {
+  .heroSection > .whiteSection div.text {
+    font-size: 25rem;
+  }
+}
+@media (max-width: 950px) {
+  .heroSection > .whiteSection div.text {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 670px) {
+  .heroSection > .whiteSection div.text {
+    font-size: 15rem;
+  }
+}
+.heroSection > .yellowPlate {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100vh;
+}
+.imageContainer > .sectionImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.imageContainer > .sectionImage > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}/*# sourceMappingURL=pagesStyles.css.map */

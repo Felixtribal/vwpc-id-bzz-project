@@ -1,0 +1,99 @@
+@import "../../static/base";
+
+// mixins for images on the site
+// Homepage mixin
+@mixin HomePageSection() {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: white;
+    z-index: 9999;
+  }
+
+  > .whiteSection {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    @include flexCenter(row);
+  }
+
+  > .whiteSection div.text {
+    width: 100%;
+    height: 100%;
+    font-size: 40rem;
+    position: absolute;
+    top: 0;
+    mix-blend-mode: screen;
+    background-color: white;
+    // overflow: auto;
+
+    > .actualText{
+      transform: translateX(100px);
+      @media (min-width:1440px) {
+        transform: translateX(200px);
+      }
+
+      
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 1439px) {
+      font-size: 25rem;
+      // padding: 0rem 0rem 0rem 15rem;
+    }
+    @media (max-width: 950px) {
+      font-size: 20rem;
+      // padding: 0rem 0rem 0rem 10rem;
+    }
+    @media (max-width: 670px) {
+      font-size: 15rem;
+      // padding: 0rem 0rem 0rem 7rem;
+    }
+  }
+
+  > .yellowPlate{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+  }
+}
+
+// image container
+@mixin ImageContainer() {
+  width: 100%;
+  height: 100vh;
+
+  > .sectionImage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    // overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+}
+
+// including the mixins to the selectors
+.heroSection {
+  @include HomePageSection();
+}
+
+.imageContainer {
+  @include ImageContainer();
+}

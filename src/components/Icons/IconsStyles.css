@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "VW Text";
+  src: url("../../public/fonts/vwtext-bold.woff") format(‘woff supports variations’);
+  font-weight: 100 900;
+  font-display: swap;
+}
+.iconContainer {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.iconContainer > .profile {
+  position: absolute;
+}/*# sourceMappingURL=IconsStyles.css.map */
