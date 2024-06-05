@@ -120,6 +120,7 @@ export const HomePage = () => {
               src={image}
               alt={`image is at ${index}`}
               className="eachImage"
+              data-testid={`image index is ${index}`}
             />
           </div>
         ))}

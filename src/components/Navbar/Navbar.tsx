@@ -7,7 +7,6 @@ import "./NavbarStyles.css";
 
 export const Navbar = () => {
 
-
   return (
     <>
       {/* responsive navbar */}
@@ -16,7 +15,7 @@ export const Navbar = () => {
         <div className="mainNavbarSide">
           <div className="leftHandSide">
             <MenuIcon />
-            <p className="menuText font-bold leading-6">Menu</p>
+            <p className="menuText font-bold leading-6" data-testid="menuText">Menu</p>
           </div>
 
           {/* right hand side of the navbar */}
