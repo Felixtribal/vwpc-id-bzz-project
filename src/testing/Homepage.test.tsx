@@ -26,4 +26,11 @@ describe("Homepage component", () => {
     expect(image).toBeVisible();
   });
   
+  test('It should display all the images on the homepage', () => {
+    render(<HomePage />);
+
+    const imageAlt = screen.getAllByTestId(/animation images/i);
+    expect(imageAlt).toBeDefined();
+  })
+  
 });
