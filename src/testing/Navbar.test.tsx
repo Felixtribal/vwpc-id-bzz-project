@@ -23,6 +23,7 @@ describe('Navbar component', () => {
         expect(screen.getByTestId("logoIcon")).toBeInTheDocument();
         expect(screen.getByTestId("logoIcon")).toBeVisible();
     })
+});
 
-    
-})
+
+
