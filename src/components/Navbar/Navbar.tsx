@@ -4,9 +4,7 @@ import { ProfileIcon } from "../Icons/ProfileIcon";
 import { SearchIcon } from "../Icons/SearchIcon";
 import "./NavbarStyles.css";
 
-
 export const Navbar = () => {
-
   return (
     <>
       {/* responsive navbar */}
@@ -15,7 +13,12 @@ export const Navbar = () => {
         <div className="mainNavbarSide">
           <div className="leftHandSide">
             <MenuIcon />
-            <p className="menuText font-bold leading-6" data-testid="menuText">Menu</p>
+            <p
+              className="menuText font-bold leading-6 cursor-pointer"
+              data-testid="menuText"
+            >
+              Menu
+            </p>
           </div>
 
           {/* right hand side of the navbar */}
@@ -30,7 +33,6 @@ export const Navbar = () => {
           <hr className="right-line" />
         </div>
       </div>
-      
     </>
   );
 };

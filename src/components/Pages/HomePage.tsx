@@ -80,9 +80,11 @@ export const HomePage = () => {
         ".actualText",
         {
           x: "200px",
+          perspective: "0px",
         },
         {
           x: "-550px",
+          perspective: "100px",
           scrollTrigger: {
             trigger: ".actualText",
             start: "top top",
@@ -109,7 +111,7 @@ export const HomePage = () => {
           src={YellowPlate}
           alt="yellow plate"
           className="yellowPlate"
-          style={{ width: "12.375rem", height: "16.75rem" }}
+          style={{ width: "12.375rem", height: "16.75rem" , zIndex:"1" }}
         />
       </div>
       {/* making images appear on the scroll animations */}
@@ -121,7 +123,6 @@ export const HomePage = () => {
               alt={`image is at ${index}`}
               className="eachImage"
               data-testid={`animation images`}
-
             />
           </div>
         ))}

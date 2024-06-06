@@ -10,7 +10,6 @@ const ResizeObserverMock = vi.fn(() => ({
 // global definition
 vi.stubGlobal("ResizeObserver", ResizeObserverMock);
 
-
 describe("Homepage component", () => {
   test("it should display the text at the homepage", () => {
     render(<HomePage />);
@@ -25,6 +24,15 @@ describe("Homepage component", () => {
     expect(image).toBeInTheDocument();
     expect(image).toBeVisible();
   });
+
+  test('It should display all the images on the homepage', () => {
+    render(<HomePage />);
+
+    const imageAlt = screen.getAllByTestId(/animation images/i);
+    expect(imageAlt).toBeDefined();
+  })
+  
+
   
   test('It should display all the images on the homepage', () => {
     render(<HomePage />);
