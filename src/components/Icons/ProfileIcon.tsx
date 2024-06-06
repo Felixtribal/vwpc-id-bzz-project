@@ -3,7 +3,7 @@ import "./IconsStyles.css";
 export const ProfileIcon = () => {
   return (
     <>
-      <div className="iconContainer" data-testid="profileIcon">
+      <div className="iconContainer" data-testid="profileIcon" data-cy="profileIcon">
         <svg
           width="22"
           height="22"

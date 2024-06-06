@@ -59,13 +59,13 @@ export const HomePage = () => {
             pin: true,
             markers: true,
             onEnter: () =>
-              gsap.to(image, { opacity: 1, zIndex: 1, duration: 1 }),
-            onLeaveBack: () =>
               gsap.to(image, { opacity: 0.5, zIndex: 0.5, duration: 1 }),
+            onLeaveBack: () =>
+              gsap.to(image, { opacity: 1, zIndex: 1, duration: 1 }),
             onEnterBack: () =>
               gsap.to(image, { opacity: 1, zIndex: 1, duration: 1 }),
             onLeave: () =>
-              gsap.to(image, { opacity: 0.5, zIndex: 0.5, duration: 1 }),
+              gsap.to(image, { opacity: 0, zIndex: 0, duration: 1 }),
           },
         });
       });
@@ -101,7 +101,7 @@ export const HomePage = () => {
   return (
     <>
       <div className="heroSection">
-        <img src={HomeBgMock} alt="background image" />
+        <img src={HomeBgMock} alt="background image" data-cy="homeBgMock" className="homeBg"/>
         <div className="whiteSection uppercase font-bold">
           <div className="text" ref={textSection}>
             <div className="actualText">IDBUZZ</div>
@@ -123,6 +123,7 @@ export const HomePage = () => {
               alt={`image is at ${index}`}
               className="eachImage"
               data-testid={`animation images`}
+              data-cy="animated images in homepage"
             />
           </div>
         ))}
