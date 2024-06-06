@@ -121,7 +121,6 @@ export const HomePage = () => {
               alt={`image is at ${index}`}
               className="eachImage"
               data-testid={`animation images`}
-
             />
           </div>
         ))}
